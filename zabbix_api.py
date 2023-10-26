@@ -26,6 +26,11 @@ class ZabbixAPI:
             "id": 1
         }
 
+        self.headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.token}"
+        }
+
         response = self.post("", json=payload)  # Sending POST request to obtain token
         token = response.get("result")
         if token is None:
@@ -43,7 +48,7 @@ class ZabbixAPI:
         Returns:
             response(json): requests response.
         """
-        response = requests.get(f"{self.url}{request_path}", headers=headers, params=params, timeout=120)
+        response = requests.get(f"{self.url}{request_path}", headers=self.headers, params=params, timeout=120)
         if response.status_code not in (200, 201):
             raise RuntimeError(
                 f"Request to Delinea api returned an error {response.status_code}, the response is:\n{response.text}"
@@ -62,7 +67,7 @@ class ZabbixAPI:
         Returns:
             response(json): requests response.
         """
-        response = requests.post(f"{self.url}{request_path}", headers=headers, json=json, data=data, timeout=120)
+        response = requests.post(f"{self.url}{request_path}", headers=self.headers, json=json, data=data, timeout=120)
         if response.status_code not in (200, 201):
             raise RuntimeError(
                 f"Request to Delinea api returned an error {response.status_code}, the response is:\n{response.text}"
@@ -81,7 +86,7 @@ class ZabbixAPI:
         Returns:
             response(json): requests response.
         """
-        response = requests.put(f"{self.url}{request_path}", headers=headers, json=json, data=data, timeout=120)
+        response = requests.put(f"{self.url}{request_path}", headers=self.headers, json=json, data=data, timeout=120)
         if response.status_code not in (200, 201):
             raise RuntimeError(
                 f"Request to Delinea api returned an error {response.status_code}, the response is:\n{response.text}"
@@ -100,7 +105,7 @@ class ZabbixAPI:
         Returns:
             response(json): requests response.
         """
-        response = requests.delete(f"{self.url}{request_path}", headers=headers, timeout=120)
+        response = requests.delete(f"{self.url}{request_path}", headers=self.headers, timeout=120)
         if response.status_code not in (200, 201):
             raise RuntimeError(
                 f"Request to Delinea api returned an error {response.status_code}, the response is:\n{response.text}"
