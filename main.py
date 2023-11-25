@@ -27,7 +27,7 @@ def create_zabbixHost_to_all_switched(ip_list , swithc_company_name, template_id
 
 
 if __name__ == '__main__':
- #    create_zabbixHost_to_all_switched(juniper_switch_list, 'juniper', template_Net_juniper_SNMP)
- #    create_zabbixHost_to_all_switched(cisco_switch_list, 'cisco', cisco_Catalyst_3750v2_24FS)
+    create_zabbixHost_to_all_switched(juniper_switch_list, 'juniper', template_Net_juniper_SNMP)
+    create_zabbixHost_to_all_switched(cisco_switch_list, 'cisco', cisco_Catalyst_3750v2_24FS)
     
-    stest_get_host('juniper ip 19')
+   # stest_get_host('juniper ip 19')
