@@ -44,3 +44,5 @@ class ZabbixManagerConfigurationPolicy:
         if not isinstance(value, str):
             raise ValueError(f"password most be string instead {value} of type : {type(value)} ")
         self._url = value
+
+

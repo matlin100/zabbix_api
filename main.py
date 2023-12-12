@@ -1,16 +1,33 @@
-# This is a sample Python script.
+from operation.zabbix_operation import *
+from configurations.switch_connection_configurtion import enable_cisco_snmp_config, enable_juniper_snmp_config
+from configurations.devicemanager.juniper_success import juniper_switch_list
+from configurations.devicemanager.cisco_success import cisco_switch_list
+from configurations.fixture_zabbix_manager_configuration import template_Net_juniper_SNMP, cisco_Catalyst_3750v2_24FS
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def enable_SNMP_to_juniper_switched(juniper_ip_list):
+    for switch in juniper_ip_list:
+        if not test_config_SNMP_juniper_switch(ip=switch['ip'], configuration=enable_juniper_snmp_config(switch['ip'])):
+            return False
+    return True
+
+def enable_SNMP_to_cisco_switched(cisco_ip_list):
+    for switch in cisco_ip_list:
+        if not test_config_SNMP_Cisci_switch(ip=switch['ip'], configuration=enable_cisco_snmp_config):
+            return False
+    return True
+    return True
+
+def create_zabbixHost_to_all_switched(ip_list , swithc_company_name, template_id):
+    for switch in ip_list:
+        ip = switch['ip']
+        octats = ip.split('.')
+        last_octate = octats[-1]
+        detals = test_create_host(host_name=f'{swithc_company_name}ip{last_octate}', ip=ip, template_id=template_id)
+        print(detals)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    create_zabbixHost_to_all_switched(juniper_switch_list, 'juniper', template_Net_juniper_SNMP)
+    create_zabbixHost_to_all_switched(cisco_switch_list, 'cisco', cisco_Catalyst_3750v2_24FS)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+

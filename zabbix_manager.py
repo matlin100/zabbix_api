@@ -1,13 +1,11 @@
 import json
 from zabbix_manager_configuration_policy import ZabbixManagerConfigurationPolicy
 from zabbix_api import ZabbixAPI
-
-
+from configurations.payload import payload_host_get_params
 class ZabbixManager:
     """
     Manages all server from operation
     """
-
     def __init__(self, configuration: ZabbixManagerConfigurationPolicy = None):
         self.configuration = configuration
         self.zabbix_api = ZabbixAPI(configuration.username, configuration.password, configuration.url)
@@ -21,12 +19,14 @@ class ZabbixManager:
 
     def get_host(self, hostName):
         self.payload["method"] = "host.get"
-        self.payload["params"] = {"filter": {"host": [hostName]}}
+        self.payload["params"] = payload_host_get_params
+        self.payload["params"]["filter"] = {"host": hostName}
+        print(self.payload)
         host_data = self.zabbix_api.post(request_path="api_jsonrpc.php", headers=self.headers, json=self.payload)
         print(json.loads(host_data.text))
-        return json.loads(host_data.text)["result"]
+        return json.loads(host_data.text)
 
-    def create_host(self, hostName, ip):
+    def create_host(self, hostName, ip, template_ids):
         self.payload["method"] = "host.create"
         self.payload["params"] = {
             "host": hostName,
@@ -41,7 +41,7 @@ class ZabbixManager:
                     }
                 ],
                 "groups": [{"groupid": "9"}],
-                # "templates":[{"templateid":"10366"}],
+                "templates":template_ids,
             }
         host_data = self.zabbix_api.post(request_path="api_jsonrpc.php", headers=self.headers, json=self.payload)
         print(json.loads(host_data.text))
