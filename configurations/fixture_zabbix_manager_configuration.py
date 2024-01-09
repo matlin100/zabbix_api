@@ -5,7 +5,7 @@ def fixture_zabbix_manager_configuration():
         zabbix_configuration = ZabbixManagerConfigurationPolicy()
         zabbix_configuration.username = "Admin"
         zabbix_configuration.password = "zabbix"
-        zabbix_configuration.url = "http://192.168.108.180/zabbix/"
+        zabbix_configuration.url = "http://192.168.108.49/zabbix/"
         return zabbix_configuration
 
 template_Net_juniper_SNMP = {"templateid": "10231"}

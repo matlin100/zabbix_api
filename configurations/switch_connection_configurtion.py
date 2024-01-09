@@ -16,15 +16,16 @@ def juniper_login(ip):
         'host': ip,
         'username':     'root',
         'password':     'juni108per',
-        'port': 22
-        }
+        'port': 22,
+        'timeout':120
+    }
     return juniper_login
 
 
 def enable_juniper_snmp_config(ip):
     enable_juniper_snmp_config = ['set snmp community zabbix_api authorization read-only',
-                                 'set snmp community zabbix_api clients  192.168.108.180',
+                                 'set snmp community zabbix_api clients 192.168.108.49',
                                  ]
     return enable_juniper_snmp_config
 enable_cisco_snmp_config = ['snmp-server community zabbix_api RO',
-                            'snmp-server host 192.168.108.180 version 2c zabbix_api']
+                            'snmp-server host 192.168.108.54 version 2c zabbix_api']
