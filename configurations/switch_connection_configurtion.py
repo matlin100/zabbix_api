@@ -24,7 +24,7 @@ def juniper_login(ip):
 
 def enable_juniper_snmp_config(ip):
     enable_juniper_snmp_config = ['set snmp community zabbix_api authorization read-only',
-                                 '  ients 192.168.108.54',
+                                 'set snmp community zabbix_api clients 192.168.108.49',
                                  ]
     return enable_juniper_snmp_config
 enable_cisco_snmp_config = ['snmp-server community zabbix_api RO',

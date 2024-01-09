@@ -48,7 +48,7 @@ def juniperConfig(ip,config_set):
 
                 for command in config_set:
                         net_connect.send_config_set(command)
-                        time.sleep(1)
+                        time.sleep(5)
                 net_connect.commit()
                 net_connect.disconnect()
                 print(f'commit in {ip}')
