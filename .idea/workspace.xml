@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8f032df-5d78-41d5-994e-338adb013c30" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/fixture_zabbix_manager_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/fixture_zabbix_manager_configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/switch_connection_configurtion.py" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/switch_connection_configurtion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/switch_concatiom_python/switch_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/switch_concatiom_python/switch_connect.py" afterDir="false" />
-    </list>
+    <list default="true" id="b8f032df-5d78-41d5-994e-338adb013c30" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
