@@ -66,14 +66,12 @@ def authenticate_devices(devices):
                 if not juniperconnect(ip_address):
                         if not ciscoConnect(ip_address):
                                 failed_login.append(device)
-"""""
-with open('../cofigoration/devicemanager/juniper_success.json', 'w') as json_file:
-        json.dump(juniper_success,json_file,indent=4)
-with open('../cofigoration/devicemanager/cisco_success.json', 'w') as json_file:
-         json.dump(cisco_success,json_file,indent=4)
-with open('../cofigoration/devicemanager/failed_login.json', 'w') as json_file:
-        json.dump(failed_login,json_file,indent=4)
-"""""
+        # with open('devicemanager/juniper_success.py', 'w') as json_file:
+        #         json.dump(juniper_success,json_file,indent=4)
+        # with open('devicemanager/cisco_success.py', 'w') as json_file:
+        #          json.dump(cisco_success,json_file,indent=4)
+        # with open('devicemanager/failed_login.py', 'w') as json_file:
+        #         json.dump(failed_login,json_file,indent=4)
 
 
 
