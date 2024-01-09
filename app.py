@@ -1,20 +1,17 @@
-from flask import Flask, render_template, jsonify
-from flask_socketio import SocketIO
+from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS
+from flask_socketio import SocketIO
+from routs.host_routes import hosst_routes_blueprint
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 socketio = SocketIO(app, cors_allowed_origins="http://localhost:3000")
 
+app.register_blueprint(hosst_routes_blueprint)
+
 @app.route('/')
 def index():
-    data = {'data': 'This text was fetched using an HTTP call to server on render'}
-    return jsonify(data)
-
-@app.route('/api/graph')
-def get_graph():
-    # Handle your graph API logic here
-    data = {'message': 'This is your graph data'}
+    data ={'data': 'This text was fetched using an HTTP call to server on render'}
     return jsonify(data)
 
 
