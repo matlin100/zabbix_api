@@ -1,12 +1,12 @@
-from netmiko import ConnectHandler
+from netmiko import ConnectHandler, NetMikoTimeoutException
 from configurations.switch_connection_configurtion import cisco_login, juniper_login
-
+import time
 
 juniper_success = []
 cisco_success = []
 failed_login = []
 
-def juniperconnect(ip , configuration = None):
+def juniperconnect(ip ):
         login = juniper_login(ip)
         try:
                 net_connect = ConnectHandler(**login)
@@ -15,7 +15,7 @@ def juniperconnect(ip , configuration = None):
                 return True
         except Exception as e:
                 return False
-def ciscoConnect(ip, configuration = None):
+def ciscoConnect(ip):
         login = cisco_login(ip)
         try:
                 net_connect = ConnectHandler(**login)
@@ -45,11 +45,16 @@ def juniperConfig(ip,config_set):
         login = juniper_login(ip)
         try:
                 net_connect = ConnectHandler(**login)
-                net_connect.send_config_set(config_set, exit_config_mode=False)
+
+                for command in config_set:
+                        net_connect.send_config_set(command)
+                        time.sleep(1)
                 net_connect.commit()
                 net_connect.disconnect()
                 print(f'commit in {ip}')
                 return True
+        except NetMikoTimeoutException as e:
+                print(f'NetMiko Timeout error for device {ip}: {str(e)}')
         except Exception as e:
                 print("Failed to connect to the device: ", str(e))
                 net_connect.disconnect()

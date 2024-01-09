@@ -5,28 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8f032df-5d78-41d5-994e-338adb013c30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configurations/devicemanager/failed_login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configurations/payload.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configurations/switch_connection_configurtion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation/zabbix_operation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routs/host_routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/zabbix_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/zabbix_api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/devicemanager/juniper_success.py" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/devicemanager/juniper_success.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/fixture_zabbix_manager_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/fixture_zabbix_manager_configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/switch_connection_configurtion.py" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/switch_connection_configurtion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/switch_concatiom_python/devicemanager/cisco_success.json" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/devicemanager/cisco_success.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/switch_concatiom_python/devicemanager/failed_login.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/switch_concatiom_python/devicemanager/juniper_success.json" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/devicemanager/juniper_success.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/switch_concatiom_python/devices_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/devices_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation/zabbix_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation/zabbix_operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routs/host_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/routs/host_routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/switch_concatiom_python/switch_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/switch_concatiom_python/switch_connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/fixture_zabbix_manager_configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_integration.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/zabbix_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zabbix_manager_configuration_policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix_manager_configuration_policy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +38,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/matlin/PycharmProjects/zabbixapi2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/matlin/PycharmProjects/zabbixapi2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\matlin\Desktop\zabbixApi" />
@@ -72,7 +59,7 @@
       <recent name="C:\Users\matlin\Desktop\zabbixApi\switch_concatiom_python\devicemanager" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.main">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="zabbix_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,6 +73,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fixture_zabbix_manager_configuration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="zabbix_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/configurations" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/configurations/fixture_zabbix_manager_configuration.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,27 +165,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in zabbix_operation.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="zabbix_api" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/operation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/operation/zabbix_operation.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app" />
-        <item itemvalue="Python.zabbix_manager" />
-        <item itemvalue="Python.payload" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Python tests in zabbix_operation.py" />
+        <item itemvalue="Python.zabbix_manager" />
+        <item itemvalue="Python.fixture_zabbix_manager_configuration" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.payload" />
       </list>
     </recent_temporary>
   </component>
@@ -218,12 +212,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <option name="timeStamp" value="8" />
+          <line>3</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

@@ -26,22 +26,28 @@ class ZabbixManager:
         print(json.loads(host_data.text))
         return json.loads(host_data.text)
 
-    def create_host(self, hostName, ip, template_ids):
+    def create_host(self, hostName, ip, template_id):
         self.payload["method"] = "host.create"
         self.payload["params"] = {
             "host": hostName,
             "interfaces": [
                     {
-                        "type": 1,
+                        "type": 2,
                         "main": 1,
                         "useip": 1,
                         "ip": ip,
                         "dns": "",
-                        "port": "10050"
+                        "port": "161",
+                        "details": {
+                            "version": 2,
+                            "community": "zabbix_api"
+                            }
                     }
                 ],
                 "groups": [{"groupid": "9"}],
-                "templates":template_ids,
+                "templates":[
+                   template_id # for example   {"templateid":"10231"},
+                ],
             }
         host_data = self.zabbix_api.post(request_path="api_jsonrpc.php", headers=self.headers, json=self.payload)
         print(json.loads(host_data.text))

@@ -9,7 +9,7 @@ def get_host(host_name):
     return host_get
 def create_host(host_name, ip,template_id = None):
     zabbix_manager = ZabbixManager(fixture_zabbix_manager_configuration())
-    host_create = zabbix_manager.create_host(hostName=host_name, ip=ip, template_ids=template_id)
+    host_create = zabbix_manager.create_host(hostName=host_name, ip=ip, template_id=template_id)
     return host_create
 def update_host():
     zabbix_manager = ZabbixManager(fixture_zabbix_manager_configuration())
